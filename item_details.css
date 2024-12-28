@@ -1,0 +1,140 @@
+/* General styling for item details */
+.item_details {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.img_details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.item_img img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.details_item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.details_item h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.details_item .price {
+    font-size: 1.5rem;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.details_item .stars {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    color: #f39c12;
+}
+
+.details_item h5 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.details_item .txt {
+    font-size: 1rem;
+    margin: 15px 0;
+    color: #555;
+}
+
+.details_item .add_btn button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.details_item .add_btn button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .section1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .item_details {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img_details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item_img img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .details_item {
+        align-items: center;
+        text-align: center;
+    }
+
+    .details_item h1 {
+        font-size: 1.5rem;
+    }
+
+    .details_item .price {
+        font-size: 1.2rem;
+    }
+
+    .details_item .txt {
+        font-size: 0.9rem;
+    }
+
+    .item_details .add_btn{
+        width: 100%;
+    }
+
+    
+
+}
+
+@media (max-width: 576px) {
+    .details_item h1 {
+        font-size: 1rem;
+    }
+
+    .details_item .price {
+        font-size: 1rem;
+    }
+
+    .details_item h5 {
+        font-size: 0.8rem;
+    }
+
+    .details_item .txt {
+        font-size: 0.5rem;
+    } 
+}

@@ -1,0 +1,164 @@
+/* General Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.section1 {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.side_bar {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.side_bar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.side_bar a {
+    display: block;
+    color: #333;
+    margin: 5px 0;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.side_bar a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Product Section */
+.all_products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.products {
+    flex: 0 0 0calc(33.33% - 10px);
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.products:hover {
+    transform: scale(1.02);
+}
+
+.products img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.add_to_cart button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add_to_cart button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .section1 {
+        flex-direction: row;
+    }
+
+    .product_div{
+        justify-content:space-evenly
+    }
+
+    .products {
+        flex:0  calc(25% - 10px);
+    }
+}
+
+@media (max-width: 992px) {
+.all_products{
+    width: 95%;
+}
+    .section1 {
+        
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side_bar {
+        width: 100%;
+    }
+
+    .products {
+        flex:0 calc(25% - 10px);
+        width: 90%;
+        justify-content: center;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
+
+@media (max-width: 768px) {
+
+    .all_products{
+        width: 95%;
+    }
+    .products {
+        flex: calc(50% - 10px);
+        text-align: center;
+    }
+
+    .add_to_cart button {
+        font-size: 14px;
+    }
+
+    .side_bar h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .products {
+        flex: 0 0 100%;
+        margin-bottom: 15px;
+    }
+
+    .section1 {
+        flex-direction: column;
+    }
+
+    .side_bar h2 {
+        text-align: center;
+    }
+
+    .side_bar a {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .add_to_cart button {
+        font-size: 12px;
+    }
+}
